@@ -99,8 +99,78 @@ class LoginViewController: UIViewController {
         /* 4. Make the request */
         let task = appDelegate.sharedSession.dataTask(with: request) { (data, response, error) in
             
+            print("========")
+            print(request)
+            print("========")
+            performUIUpdatesOnMain{
+                self.debugTextLabel.text = "\(self.debugTextLabel.text!) \n========\n\(request.description)\n========\n"
+            }
+            
+            // if an error occurs, print it and re-enable the UI
+            func displayError(_ error: String) {
+                print(error)
+                performUIUpdatesOnMain {
+                    self.setUIEnabled(true)
+                    self.debugTextLabel.text = "Login Failed (Request Token)."
+                }
+            }
+            
+            /* GUARD: Was there an error? */
+            guard (error == nil) else {
+                displayError("There was an error with your request: \(String(describing: error))")
+                return
+            }
+            
+            /* GUARD: Did we get a successful 2XX response? */
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
+                displayError("Your request returned a status code other than 2xx!")
+                return
+            }
+            
+            /* GUARD: Was there any data returned? */
+            guard let data = data else {
+                displayError("No data was returned by the request!")
+                return
+            }
+            
             /* 5. Parse the data */
+            let parsedResult: [String:AnyObject]!
+            do {
+                parsedResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String:AnyObject]
+            } catch {
+                displayError("Could not parse the data as JSON: '\(data)'")
+                return
+            }
+            
+            print("=====")
+            print(parsedResult)
+            print("=====")
+            performUIUpdatesOnMain{
+                self.debugTextLabel.text = "\(self.debugTextLabel.text!) \n========\n\(parsedResult)\n========\n"
+            }
+            
+            
+            /* GUARD: Did TheMovieDB return an error? */
+            if let _ = parsedResult[Constants.TMDBResponseKeys.StatusCode] as? Int {
+                displayError("TheMovieDB returned an error. See the '\(Constants.TMDBResponseKeys.StatusCode)' and '\(Constants.TMDBResponseKeys.StatusMessage)' in \(parsedResult)")
+                return
+            }
+            
+            /* GUARD: Is the "request_token" key in parsedResult? */
+            guard let requestToken = parsedResult[Constants.TMDBResponseKeys.RequestToken] as? String else {
+                displayError("Cannot find key '\(Constants.TMDBResponseKeys.RequestToken)' in \(parsedResult)")
+                return
+            }
+            
             /* 6. Use the data! */
+            self.appDelegate.requestToken = requestToken
+            print("=====")
+            print(requestToken)
+            print("=====")
+            performUIUpdatesOnMain{
+                self.debugTextLabel.text = "\(self.debugTextLabel.text!) \n========\n\(requestToken)\n========\n"
+            }
+            self.loginWithToken(self.appDelegate.requestToken!)
         }
 
         /* 7. Start the request */

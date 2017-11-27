@@ -21,6 +21,7 @@ To visualize JSON:
 The MovieDB API documentation:
 - [The Movie Database API](https://www.themoviedb.org/documentation/api)
 - [starting](https://developers.themoviedb.org/3/getting-started)
+- [create-request-token](https://developers.themoviedb.org/3/authentication/create-request-token)
 
 
 
