@@ -25,6 +25,13 @@ The MovieDB API documentation:
 - [create-request-token](https://developers.themoviedb.org/3/authentication/create-request-token)
 - [create-session](https://developers.themoviedb.org/3/authentication/create-session)
 - [get-account-details](https://developers.themoviedb.org/3/account/get-account-details)
+- [status-codes](https://www.themoviedb.org/documentation/api/status-codes)
+- [mark-as-favorite](https://developers.themoviedb.org/3/account/mark-as-favorite)
+
+Knowledge notes:
+- [Get request vs Post request](https://www.w3schools.com/tags/ref_httpmethods.asp)
+- [List_of_HTTP_status_codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
 
 
 
