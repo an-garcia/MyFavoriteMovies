@@ -12,6 +12,15 @@
 		8294C52F1FCCB1BD0079670C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294C52D1FCCB1BD0079670C /* Main.storyboard */; };
 		8294C5311FCCB1BD0079670C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8294C5301FCCB1BD0079670C /* Assets.xcassets */; };
 		8294C5341FCCB1BD0079670C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8294C5321FCCB1BD0079670C /* LaunchScreen.storyboard */; };
+		8294C5401FCCB3FD0079670C /* GenreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C53C1FCCB3FD0079670C /* GenreTableViewController.swift */; };
+		8294C5411FCCB3FD0079670C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C53D1FCCB3FD0079670C /* LoginViewController.swift */; };
+		8294C5421FCCB3FD0079670C /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C53E1FCCB3FD0079670C /* FavoritesTableViewController.swift */; };
+		8294C5431FCCB3FD0079670C /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C53F1FCCB3FD0079670C /* MovieDetailViewController.swift */; };
+		8294C5471FCCB42C0079670C /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C5441FCCB42C0079670C /* GCDBlackBox.swift */; };
+		8294C5481FCCB42C0079670C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C5451FCCB42C0079670C /* Constants.swift */; };
+		8294C5491FCCB42C0079670C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C5461FCCB42C0079670C /* Movie.swift */; };
+		8294C54D1FCCB4740079670C /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C54B1FCCB4740079670C /* BorderedButton.swift */; };
+		8294C54E1FCCB4740079670C /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8294C54C1FCCB4740079670C /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		8294C5301FCCB1BD0079670C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8294C5331FCCB1BD0079670C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8294C5351FCCB1BD0079670C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8294C53C1FCCB3FD0079670C /* GenreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreTableViewController.swift; sourceTree = "<group>"; };
+		8294C53D1FCCB3FD0079670C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8294C53E1FCCB3FD0079670C /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
+		8294C53F1FCCB3FD0079670C /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		8294C5441FCCB42C0079670C /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		8294C5451FCCB42C0079670C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8294C5461FCCB42C0079670C /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		8294C54B1FCCB4740079670C /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
+		8294C54C1FCCB4740079670C /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +73,38 @@
 			isa = PBXGroup;
 			children = (
 				8294C5291FCCB1BD0079670C /* AppDelegate.swift */,
+				8294C5451FCCB42C0079670C /* Constants.swift */,
+				8294C5441FCCB42C0079670C /* GCDBlackBox.swift */,
+				8294C5461FCCB42C0079670C /* Movie.swift */,
+				8294C54A1FCCB4580079670C /* Provided Classes */,
 				8294C52B1FCCB1BD0079670C /* ViewController.swift */,
+				8294C53B1FCCB3D60079670C /* View Controllers */,
 				8294C52D1FCCB1BD0079670C /* Main.storyboard */,
 				8294C5301FCCB1BD0079670C /* Assets.xcassets */,
 				8294C5321FCCB1BD0079670C /* LaunchScreen.storyboard */,
 				8294C5351FCCB1BD0079670C /* Info.plist */,
 			);
 			path = MyFavoriteMovies;
+			sourceTree = "<group>";
+		};
+		8294C53B1FCCB3D60079670C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8294C53E1FCCB3FD0079670C /* FavoritesTableViewController.swift */,
+				8294C53C1FCCB3FD0079670C /* GenreTableViewController.swift */,
+				8294C53D1FCCB3FD0079670C /* LoginViewController.swift */,
+				8294C53F1FCCB3FD0079670C /* MovieDetailViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8294C54A1FCCB4580079670C /* Provided Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8294C54B1FCCB4740079670C /* BorderedButton.swift */,
+				8294C54C1FCCB4740079670C /* Config.swift */,
+			);
+			name = "Provided Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +179,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8294C54D1FCCB4740079670C /* BorderedButton.swift in Sources */,
+				8294C5411FCCB3FD0079670C /* LoginViewController.swift in Sources */,
+				8294C5401FCCB3FD0079670C /* GenreTableViewController.swift in Sources */,
+				8294C5491FCCB42C0079670C /* Movie.swift in Sources */,
+				8294C54E1FCCB4740079670C /* Config.swift in Sources */,
 				8294C52C1FCCB1BD0079670C /* ViewController.swift in Sources */,
+				8294C5421FCCB3FD0079670C /* FavoritesTableViewController.swift in Sources */,
+				8294C5431FCCB3FD0079670C /* MovieDetailViewController.swift in Sources */,
 				8294C52A1FCCB1BD0079670C /* AppDelegate.swift in Sources */,
+				8294C5471FCCB42C0079670C /* GCDBlackBox.swift in Sources */,
+				8294C5481FCCB42C0079670C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
