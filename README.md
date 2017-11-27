@@ -3,6 +3,7 @@
 
 ![Scheme](/screenshots/SimulatorScreenShot-iPhone8Plus-2017-11-27at16.07.19.png)
 ![Scheme](/screenshots/SimulatorScreenShot-iPhone8Plus-2017-11-27at18.18.34.png)
+![Scheme](/screenshots/SimulatorScreenShot-iPhone8Plus-2017-11-27at18.52.01.png)
 
 
 MyFavoriteMovies is an iOS sample application that manages favorite movies using TheMovieDB API.
